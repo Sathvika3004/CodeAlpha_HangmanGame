@@ -13,6 +13,8 @@ A simple text-based Hangman game built using Python as part of the CodeAlpha Pyt
 
 ## 🛠 Technologies Used
 - Python
+- Loops and conditional statements
+- Random modules
 
 ## ▶ How to Run
 1. Download or clone this repository
