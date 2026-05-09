@@ -1,5 +1,5 @@
 import random
-
+used_letters=[]
 words = ["laptop", "keyboard", "shinchan", "internet", "secret"]
 word = random.choice(words)
 
@@ -10,8 +10,12 @@ print("Welcome to Hangman!")
 
 while attempts > 0 and "_" in guessed_word:
     print("\nWord:", " ".join(guessed_word))
+    print("Used letters:","".join(used_letters))
     guess = input("Enter a letter: ").lower()
-
+    if guess in used_letters:
+        print("You already guessed that letter!")
+        continue
+    used_letters.append(guess)
     if guess in word:
         for i in range(len(word)):
             if word[i] == guess:
